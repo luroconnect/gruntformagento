@@ -1,0 +1,16 @@
+{
+  "name": "name",
+  "version": "0.1.0",
+  "cssver":"1",
+  "jsver":"1",
+  "theme": "theme",
+  "baserepo" : "",
+  "repobranch" : "trunk",
+  "scm":"svn",
+  "clearcache":false,
+  "reindex":false,
+  "js":true,
+  "css":true,
+  "xcssfiles":[]
+  "xjsfiles":[]
+}
