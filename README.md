@@ -55,10 +55,16 @@ The script gives flexibility by reading 3 json files in successsion, allowing pr
 
 **dev** : the main development task. Will update from scm (svn update or git pull) and run compass to compile.
 
-**watch** : server watch to run optimize tasks
+**watch** : watch skin, js, sass and media/wysiwyg directories and run sass or optimize
 
 **package** : create a tar.gz for deployment based on a manifest json with a list of files to package.
 
 **release** : take the packaged tar.gz and deploy on live server. A backup is taken before.
 
 **rollback** : rollback a package by deploying from the backup
+
+### Upcoming tasks and improvements
+* sass build in theme relative directory that is configurable
+* less build (for Magento 2)
+* make tasks more developer friendly
+* Improve documentation 
