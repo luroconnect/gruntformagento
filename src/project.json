@@ -11,6 +11,6 @@
   "reindex":false,
   "js":true,
   "css":true,
-  "xcssfiles":[]
+  "xcssfiles":[],
   "xjsfiles":[]
 }
