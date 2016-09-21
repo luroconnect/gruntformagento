@@ -239,6 +239,57 @@ options: {                       // Target options
           }
         },
        compress: {
+            skinjs: {
+               options: {
+                     level: 9,
+                     mode: 'gzip'
+                   },
+                expand: true,
+                cwd: "../<%= pkg.skinmin %>/",
+                src: [ "**/*.js"],
+                dest: "../<%= pkg.skinmin %>/",
+                ext: ".js.gz"
+
+            },
+            skincss: {
+               options: {
+                     level: 9,
+                     mode: 'gzip'
+                   },
+                expand: true,
+                cwd: "../<%= pkg.skinmin %>/",
+                src: [ "**/*.css"],
+                dest: "../<%= pkg.skinmin %>/",
+                ext: ".css.gz"
+            },
+            js: {
+               options: {
+                     level: 9,
+                     mode: 'gzip'
+                   },
+
+                expand: true,
+                cwd: "../<%= pkg.jsmin %>/",
+                src: [ "**/*.js"],
+                dest: "../<%= pkg.jsmin %>/",
+                ext: ".js.gz",
+                extDot: 'last'
+
+            },
+            jsmin: {
+               options: {
+                     level: 9,
+                     mode: 'gzip'
+                   },
+
+                expand: true,
+                cwd: "../<%= pkg.jsmin %>/",
+                src: [ "**/*.min.js"],
+                dest: "../<%= pkg.jsmin %>/",
+                ext: ".min.js.gz"
+
+            },
+
           dopackage: {
             options : {
               "mode" : "tgz",
