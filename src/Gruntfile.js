@@ -384,7 +384,9 @@ options: {                       // Target options
     production_task_list = [ "watch", scm_fetch_task ];
     package_task_list = [ "compress" ];
     release_task_list = [ "untar" ];
-    optimize_task_list = [ "copy:skin", "copy:js", "uglify:skin", "uglify:js", "cssmin:skin", "imagemin:skin","imagemin:media_wysiwyg"]
+    optimize_task_list = [ "copy:skin", "copy:js", "uglify:skin", "uglify:js", "cssmin:skin", "imagemin:skin", "compress:skinjs", "compress:skincss", "compress:js"]
+    mediawysiwyg_task_list = ["imagemin:media_wysiwyg"];
+
     post_task_list = [];
     if(pkg.clearcache){
        post_task_list.push(cache_clean_task_list);
@@ -395,6 +397,7 @@ options: {                       // Target options
     grunt.registerTask("dev", dev_task_list.concat(post_task_list));
     grunt.registerTask("staging", staging_task_list.concat(post_task_list));
     grunt.registerTask("optimize", optimize_task_list.concat(post_task_list));
+    grunt.registerTask("media", mediawysiwyg_task_list.concat(post_task_list));
     grunt.registerTask("production", production_task_list.concat(post_task_list));
     grunt.registerTask("dopackage", package_task_list.concat(post_task_list));
     grunt.registerTask("dorelease", release_task_list.concat(post_task_list));
